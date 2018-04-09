@@ -1,9 +1,9 @@
+### https://raw.github.com/github/gitignore/160d27e2bebf784c4f4a1e070df057f3868b62bc/Node.gitignore
+
 # Logs
 logs
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # Runtime data
 pids
@@ -23,9 +23,6 @@ coverage
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
-# Bower dependency directory (https://bower.io/)
-bower_components
-
 # node-waf configuration
 .lock-wscript
 
@@ -33,11 +30,8 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
-jspm_packages/
-
-# Typescript v1 declaration files
-typings/
+node_modules
+jspm_packages
 
 # Optional npm cache directory
 .npm
@@ -54,6 +48,8 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
-.env
-
+# netlify
+public/*
+!public/_redirects
+!public/index.html
+.netlify

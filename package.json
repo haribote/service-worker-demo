@@ -1,0 +1,81 @@
+{
+  "name": "fe-base",
+  "private": true,
+  "author": "mizchi <miz404@gmail.com>",
+  "license": "MIT",
+  "jest": {
+    "testMatch": [
+      "**/__tests__/*.test.js"
+    ]
+  },
+  "scripts": {
+    "lint": "eslint src",
+    "test": "NODE_ENV=test jest",
+    "test:watch": "yarn test --watch",
+    "glow": "glow --watch",
+    "test:cov": "yarn test --collectCoverage",
+    "watch": "webpack-dev-server --hot --mode development",
+    "build:dev": "webpack --mode development",
+    "build": "NODE_ENV=production webpack --mode production",
+    "build:size": "NODE_ENV=production webpack --json | webpack-bundle-size-analyzer",
+    "build:ci": "yarn lint && yarn test:cov && yarn build",
+    "deploy": "yarn build && netlify deploy",
+    "storybook": "start-storybook -p 6006"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "babel-polyfill": "^6.26.0",
+    "history": "^4.7.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "recompose": "^0.26.0",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-promise": "^0.5.3",
+    "redux-thunk": "^2.2.0",
+    "styled-components": "^3.0.2",
+    "universal-router": "^5.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/plugin-proposal-object-rest-spread": "7.0.0-beta.38",
+    "@babel/plugin-syntax-dynamic-import": "7.0.0-beta.38",
+    "@babel/polyfill": "^7.0.0-beta.40",
+    "@babel/preset-env": "7.0.0-beta.38",
+    "@babel/preset-flow": "7.0.0-beta.38",
+    "@babel/preset-react": "7.0.0-beta.38",
+    "@babel/register": "^7.0.0-beta.40",
+    "@storybook/addon-actions": "^3.3.10",
+    "@storybook/addon-links": "^3.3.10",
+    "@storybook/addon-storyshots": "^3.3.10",
+    "@storybook/react": "^3.3.10",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^8.2.1",
+    "babel-jest": "^22.2.2",
+    "babel-loader": "^8.0.0-beta.0",
+    "babel-plugin-module-resolver": "^3.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.0.1",
+    "enzyme-to-json": "^3.3.1",
+    "eslint": "^4.16.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-plugin-prettier": "^2.5.0",
+    "eslint-plugin-react": "^7.6.0",
+    "flow-bin": "^0.65.0",
+    "glow": "^1.2.2",
+    "jest": "^22.3.0",
+    "netlify-cli": "^1.2.2",
+    "prettier": "^1.10.2",
+    "react-hot-loader": "^4.0.0-beta.22",
+    "react-redux": "^5.0.6",
+    "react-test-renderer": "^16.0.0",
+    "regenerator-runtime": "^0.11.1",
+    "webpack": "^4.0.0-beta.1",
+    "webpack-cli": "^2.0.6",
+    "webpack-dev-server": "3.0.0-beta.1"
+  }
+}
